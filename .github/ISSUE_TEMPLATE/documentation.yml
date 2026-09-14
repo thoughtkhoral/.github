@@ -1,0 +1,24 @@
+name: Documentation correction
+description: Report missing, incorrect, or unclear project documentation
+title: "docs: "
+labels: ["type: documentation", "status: needs-triage"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Documentation location
+      placeholder: URL or repository path
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing, incorrect, or difficult to follow?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Describe the expected content or contributor outcome.

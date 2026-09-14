@@ -1,0 +1,30 @@
+name: Feature or capability request
+description: Propose an outcome for the project to evaluate
+title: "feat: "
+labels: ["type: feature", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accepted requests become specification updates before implementation.
+  - type: input
+    id: affected-repository
+    attributes:
+      label: Affected repository
+      placeholder: thought-khoral-room-gateway
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What user or operator outcome should this enable?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and evidence
+      description: Include use cases, constraints, compatibility concerns, and evidence.
+    validations:
+      required: true

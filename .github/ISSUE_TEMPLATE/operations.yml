@@ -1,0 +1,26 @@
+name: Deployment or operational problem
+description: Report a reproducible local or deployment failure
+title: "ops: "
+labels: ["type: operations", "status: needs-triage"]
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      placeholder: thought-khoral-platform
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, runtime versions, container engine, and deployment mode.
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure and reproduction
+      description: Include commands and sanitized logs; remove credentials and private data.
+    validations:
+      required: true

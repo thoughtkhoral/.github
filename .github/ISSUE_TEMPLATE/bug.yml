@@ -1,0 +1,36 @@
+name: Bug or test failure
+description: Report behavior that does not match an approved requirement
+title: "bug: "
+labels: ["type: bug", "status: needs-triage"]
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Affected repository
+      placeholder: thought-khoral-platform
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Commit or release
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: List commands, inputs, and the smallest reproducible case.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      description: Remove tokens, passwords, private room content, and personal data.

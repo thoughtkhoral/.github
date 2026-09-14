@@ -1,0 +1,25 @@
+name: Protocol or compatibility change
+description: Propose a change to a shared contract or compatibility boundary
+title: "protocol: "
+labels: ["type: protocol", "status: needs-triage"]
+body:
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed contract change
+      description: Describe the method, schema, event, or compatibility behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and migration impact
+      description: Identify producers, consumers, versions, and migration needs.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and acceptance criteria
+    validations:
+      required: true

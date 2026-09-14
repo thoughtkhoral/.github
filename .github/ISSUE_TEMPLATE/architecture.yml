@@ -1,0 +1,25 @@
+name: Architecture or governance proposal
+description: Propose a durable cross-project design or policy change
+title: "architecture: "
+labels: ["type: architecture", "status: needs-triage"]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the durable outcome or policy you want to establish.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and consequences
+      description: Identify alternatives, affected repositories, and trade-offs.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and acceptance criteria
+    validations:
+      required: true
