@@ -1,0 +1,37 @@
+# Organization label catalog.
+# Apply these labels to each public repository; issue forms reference the names
+# exactly. Keep this file as the source of truth for label names and meaning.
+labels:
+  - name: "type: feature"
+    color: 1D76DB
+    description: Proposed product capability or user outcome
+  - name: "type: bug"
+    color: D73A4A
+    description: Behavior that does not match an approved requirement
+  - name: "type: documentation"
+    color: 0075CA
+    description: Documentation or public-project information
+  - name: "type: protocol"
+    color: B60205
+    description: Shared contract, schema, or compatibility change
+  - name: "type: architecture"
+    color: 5319E7
+    description: Durable cross-project design or governance proposal
+  - name: "type: operations"
+    color: FBCA04
+    description: Deployment, environment, or operational problem
+  - name: "status: needs-triage"
+    color: E4E669
+    description: Maintainers have not completed initial triage
+  - name: "status: accepted"
+    color: 0E8A16
+    description: Request accepted for specification and implementation planning
+  - name: "status: deferred"
+    color: C5DEF5
+    description: Valid request intentionally scheduled for later
+  - name: "status: blocked"
+    color: D93F0B
+    description: Progress requires an external decision or dependency
+  - name: "status: implemented"
+    color: 0E8A16
+    description: Accepted change is implemented and verified

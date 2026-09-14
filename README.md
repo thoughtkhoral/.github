@@ -16,7 +16,12 @@ not here.
 - `SECURITY.md` — private vulnerability reporting guidance;
 - `SUPPORT.md` — repository routing for support issues;
 - `ISSUE_TEMPLATE/` — structured issue intake;
+- `labels.yml` — the versioned organization label catalog;
 - `PULL_REQUEST_TEMPLATE.md` — issue and specification traceability checks.
 
 Changes to these defaults should reference an issue in the `thought-khoral`
 repository and be reviewed as organization-governance documentation.
+
+GitHub labels are repository-local settings. Apply the names in `labels.yml` to
+each public repository when enabling the issue forms; the issue forms reference
+these names exactly.
