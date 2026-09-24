@@ -5,16 +5,22 @@ role-specific AI agents deliberate together while humans retain authority over
 room context and decisions.
 
 The project is organized as independently versioned repositories. The current
-focus is a technical MVP for governed, real-time rooms and human confirmation
-of facilitator proposals. This is an active development project and is
+focus is a technical MVP for governed, real-time rooms and human-controlled
+decisions. This is an active development project and is
 looking for technical evaluation and feedback. The [project home](https://github.com/thoughtkhoral/thought-khoral)
 and [repository map](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/repository-map.md)
 describe the architecture and cross-project boundaries.
 
+For current interface support and capability status, see the
+[compatibility matrix](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/compatibility-matrix.md)
+and [capability roadmap](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/roadmap.md).
+
 ## Current state
 
-The MVP repositories demonstrate authenticated rooms, real-time events,
-deterministic facilitator proposals, and human decision governance. Incubating
+The MVP repositories demonstrate authenticated rooms, mention-aware message
+delivery, a human `/decisions` workflow, and audited decision governance. The
+former `Decision:` chat-prefix facilitator is retired; its proposal port is
+reserved for a separately approved memory-derived implementation. Incubating
 work adds a room-scoped memory ingestion proof and a locally controlled
 deterministic A2A reference agent. Cognee integration, open remote-agent
 admission, and production deployment remain deferred.
@@ -36,8 +42,9 @@ orientation to the project boundaries and current maturity.
 
 - Authenticated, governed rooms.
 - Real-time room events with a defined protocol boundary.
-- Deterministic facilitator proposals.
-- Human confirmation, editing, or dismissal of draft decisions.
+- Room-wide and mentioned-only chat delivery with governed audiences.
+- Human creation, confirmation, editing, dismissal, and audited deletion of
+  decisions through `/decisions`.
 
 ## Active MVP repositories
 

@@ -18,6 +18,9 @@ not here.
 - `ISSUE_TEMPLATE/` — structured issue intake;
 - `labels.yml` — the versioned organization label catalog;
 - `PULL_REQUEST_TEMPLATE.md` — issue and specification traceability checks.
+- `.github/workflows/documentation-links.yml` — checks maintained Markdown
+  links in the organization, project home, and six component repositories on
+  organization changes and a weekly schedule.
 
 Changes to these defaults should reference an issue in the `thought-khoral`
 repository and be reviewed as organization-governance documentation.

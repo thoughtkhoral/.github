@@ -1,0 +1,40 @@
+name: Documentation links
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out organization documentation
+        uses: actions/checkout@v6
+        with:
+          path: org
+
+      - name: Check out public project documentation
+        run: |
+          git clone --quiet --depth 1 https://github.com/thoughtkhoral/thought-khoral.git project
+          for repo in \
+            thought-khoral-contracts \
+            thought-khoral-room-gateway \
+            thought-khoral-workspace-ui \
+            thought-khoral-memory-engine \
+            thought-khoral-agent-gateway \
+            thought-khoral-platform; do
+            git clone --quiet --depth 1 "https://github.com/thoughtkhoral/$repo.git" "project/$repo"
+          done
+
+      - name: Test link checker
+        run: python3 -m unittest discover -s org/scripts -p 'test_check_doc_links.py'
+
+      - name: Check maintained documentation links
+        run: python3 org/scripts/check_doc_links.py --root project --org org --require-components
