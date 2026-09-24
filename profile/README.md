@@ -11,13 +11,14 @@ the [project home](https://github.com/thoughtkhoral/thought-khoral) and its
 ## Current state
 
 The MVP repositories demonstrate authenticated rooms, real-time events,
-deterministic facilitator proposals, and human decision governance. The memory
-engine and agent gateway are public specification-only projects while their
-runtime designs are being developed.
+deterministic facilitator proposals, and human decision governance. Incubating
+work adds a room-scoped memory ingestion proof and a locally controlled
+deterministic A2A reference agent. Cognee integration, open remote-agent
+admission, and production deployment remain deferred.
 
 ## Contributing
 
 ThoughtKhoral is specification-driven. Begin with an issue in the repository
 that owns the behavior; accepted issues become approved specification updates,
-then implementation and generated documentation. See
+then implementation and supporting documentation. See
 [CONTRIBUTING.md](https://github.com/thoughtkhoral/.github/blob/main/CONTRIBUTING.md).
