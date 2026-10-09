@@ -27,7 +27,7 @@ for a separately approved memory-derived implementation.
 The experimental, provider-free Codex conversation POC currently supports:
 
 - Explicit human targeting and authorized room-wide history, including relevant
-  discussion from while Codex was not responding.
+  discussion that took place while Codex was not responding.
 - Shared conversation continuation and explicit fresh-session controls; starting
   a fresh session preserves the room transcript.
 - Model and effort controls plus context-usage status in the workspace UI.
