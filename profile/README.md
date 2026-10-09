@@ -17,21 +17,38 @@ see the [cross-project Codex status guide](https://github.com/thoughtkhoral/thou
 the [compatibility matrix](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/compatibility-matrix.md),
 and [capability roadmap](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/roadmap.md).
 
-## Current state
+## Current state (status reviewed 2026-10-09)
 
 The core MVP demonstrates authenticated rooms, mention-aware message delivery,
 a human `/decisions` workflow, and audited decision governance. The former
 `Decision:` chat-prefix facilitator is retired; its proposal port is reserved
 for a separately approved memory-derived implementation.
 
-An experimental, provider-free Codex conversation POC is implemented across the
-contracts, room gateway, agent gateway, worker, UI, and opt-in platform
-packaging. It supports explicit human targeting and authorized room-history
-processing. Provider-free component and synthetic composed checks are recorded,
-but packaged-stack acceptance and separately authorized live-provider
-verification remain open. The v1.1 defaults candidate is unreleased; the
-published v1.0.0 conversation artifact is unchanged. This is not a production
-readiness claim. See the cross-project status guide for exact evidence and gates.
+The experimental, provider-free Codex conversation POC currently supports:
+
+- Explicit human targeting and authorized room-wide history, including relevant
+  discussion from while Codex was not responding.
+- Shared conversation continuation and explicit fresh-session controls; starting
+  a fresh session preserves the room transcript.
+- Model and effort controls plus context-usage status in the workspace UI.
+- Gateway-mediated room access; the independent worker has no direct room
+  database access.
+- Provider-free component suites and synthetic composed checks.
+
+Codex acceptance remains open for:
+
+- Packaged-stack acceptance and live tool/egress-isolation checks.
+- A separately authorized live multi-human check covering an intervening room
+  fact, worker restart and continuation, and a fresh session with the authorized
+  room baseline.
+- Live settings, denied-model, and context-telemetry checks, plus Linux x86_64
+  native tool-policy and Rust 1.85 portability evidence.
+
+The published conversation v1.0.0 artifact is unchanged; the additive v1.1
+defaults candidate remains unreleased. These are experimental POC capabilities,
+not production-readiness evidence. See the
+[cross-project status guide](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/codex-conversation-status.md)
+for exact evidence and gates.
 
 The memory engine remains a separate, incubating room-scoped ingestion proof;
 Codex does not use it. A locally controlled deterministic A2A reference agent
