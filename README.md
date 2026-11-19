@@ -9,6 +9,14 @@ cross-project content belong in the
 [ThoughtKhoral project home](https://github.com/thoughtkhoral/thought-khoral),
 not here.
 
+## Current project status
+
+The [organization profile](profile/README.md#current-state-status-reviewed-2026-11-19)
+summarizes the implemented MVP, verified native Codex worker, remaining Task 9
+room-stack/browser/live checks and the next verification milestone. Detailed
+scope and evidence remain in the project home's
+[cross-project status guide](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/codex-conversation-status.md).
+
 ## Contents
 
 - `profile/README.md` — organization landing page;

@@ -19,45 +19,39 @@ and [capability roadmap](https://github.com/thoughtkhoral/thought-khoral/blob/ma
 
 ## Current state (status reviewed 2026-11-19)
 
-The core MVP demonstrates authenticated rooms, mention-aware message delivery,
-a human `/decisions` workflow, and audited decision governance. The former
-`Decision:` chat-prefix facilitator is retired; its proposal port is reserved
-for a separately approved memory-derived implementation.
+The governed-room MVP and experimental Codex integration are implemented and
+published on their repositories' `main` branches. Native worker verification is
+complete for the tested revisions; full Codex room-stack and live-provider
+acceptance remain open.
 
-The experimental, provider-free Codex conversation POC currently supports:
+| Area | Verified or implemented | Remaining boundary |
+| --- | --- | --- |
+| Governed-room MVP | Authenticated rooms, ordered events, mention-aware delivery, human `/decisions` and audited deletion. The default deterministic-stack smoke passed at its recorded source inputs. | Local development evidence; no production acceptance. |
+| Codex conversation POC | Explicit human targeting, authorized room-wide history, shared continue/fresh-session controls, model/effort settings and context status. Component and composed synthetic checks passed. | Full opt-in room-stack, rendered-browser/Keycloak and live-provider verification remain open. |
+| Native Codex worker | Linux AMD64/ARM64 tests passed on Rust 1.85.0 and 1.93.1: 46 tests per cell. Both package-policy captures passed using the pinned Rust 1.93.1 builder. | Worker/package evidence does not establish live account access or full room-stack acceptance. |
+| Contracts | Conversation v1.0.0 is published and unchanged; additive v1.1 defaults source is on `main`. | The v1.1 artifact is unreleased; source publication is not a contract release. |
+| Memory engine | Incubating room-scoped, in-memory ingestion/provenance proof with fixture extraction and an inactive draft adapter. | No active memory proposer, Codex memory integration, Cognee or durable storage. |
+| Specifications and docs | Specs and derived guides are synchronized. Published organization link checks cover the project home and all seven components. | Runtime, browser, provider and release acceptance are tracked separately. |
 
-- Explicit human targeting and authorized room-wide history, including relevant
-  discussion that took place while Codex was not responding.
-- Shared conversation continuation and explicit fresh-session controls; starting
-  a fresh session preserves the room transcript.
-- Model and effort controls plus context-usage status in the workspace UI.
-- Gateway-mediated room access; the independent worker has no direct room
-  database access.
-- Provider-free component suites and synthetic composed checks.
-- Native Linux worker tests on AMD64/ARM64 with Rust 1.85.0/1.93.1 and both
-  package-policy captures using the pinned Rust 1.93.1 builder. The
-  [approved worker acceptance record](https://github.com/thoughtkhoral/thought-khoral-codex-agent/blob/main/.ai/specs/how/linux-worker-acceptance.md)
-  retains exact source, lock, proof and artifact evidence.
+Recent evidence: the [latest verified worker run](https://github.com/thoughtkhoral/thought-khoral-codex-agent/actions/runs/44604155672)
+passed all four native compiler cells and both package/capture jobs. The
+[approved native acceptance record](https://github.com/thoughtkhoral/thought-khoral-codex-agent/blob/main/.ai/specs/how/linux-worker-acceptance.md)
+retains exact source, lock, proof and artifact identities. The
+[published documentation check](https://github.com/thoughtkhoral/.github/actions/runs/44604555518)
+also passed across all seven components.
 
-Codex acceptance remains open for:
+### Next verification milestone
 
-- Packaged-stack acceptance and live tool/egress-isolation checks.
-- A separately authorized live multi-human check covering an intervening room
-  fact, worker restart and continuation, and a fresh session with the authorized
-  room baseline.
-- Live settings, denied-model and context-telemetry checks, plus rendered-browser
-  verification of the full opt-in room stack.
+Complete **Codex Task 9 packaged room-stack and rendered-browser verification**.
+Then perform the separately configured and authorized live multi-human checks:
+an intervening room fact, worker restart and continuation, explicit fresh session,
+settings restoration, denied-model behavior, context telemetry and tool/egress
+isolation. See the [coordinated acceptance plan](https://github.com/thoughtkhoral/thought-khoral/blob/main/.ai/specs/how/codex-room-conversations-implementation-plan.md)
+for the exact criteria and evidence limits.
 
-The published conversation v1.0.0 artifact is unchanged; the additive v1.1
-defaults candidate remains unreleased. These are experimental POC capabilities,
-not production-readiness evidence. See the
-[cross-project status guide](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/codex-conversation-status.md)
-for exact evidence and gates.
-
-The memory engine remains a separate, incubating room-scoped ingestion proof;
-Codex does not use it. A locally controlled deterministic A2A reference agent
-is also available. Cognee integration, open remote-agent admission, durable
-memory storage, and production deployment remain deferred.
+Contract/image publication, release and production readiness remain separate
+gates. Open remote-agent admission is deferred. The former `Decision:` prefix
+parser is retired; human actions retain authority over active decisions.
 
 ## Start with the MVP
 
