@@ -29,6 +29,7 @@ jobs:
             thought-khoral-workspace-ui \
             thought-khoral-memory-engine \
             thought-khoral-agent-gateway \
+            thought-khoral-codex-agent \
             thought-khoral-platform; do
             git clone --quiet --depth 1 "https://github.com/thoughtkhoral/$repo.git" "project/$repo"
           done

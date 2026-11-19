@@ -15,6 +15,7 @@ COMPONENTS = (
     "thought-khoral-memory-engine",
     "thought-khoral-agent-gateway",
     "thought-khoral-platform",
+    "thought-khoral-codex-agent",
 )
 SKIP_DIRECTORIES = {
     ".git", ".github", ".superpowers", ".worktrees", "node_modules", "target", "vendor", "dist"
