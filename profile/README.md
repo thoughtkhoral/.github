@@ -17,7 +17,7 @@ see the [cross-project Codex status guide](https://github.com/thoughtkhoral/thou
 the [compatibility matrix](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/compatibility-matrix.md),
 and [capability roadmap](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/roadmap.md).
 
-## Current state (status reviewed 2026-10-09)
+## Current state (status reviewed 2026-11-19)
 
 The core MVP demonstrates authenticated rooms, mention-aware message delivery,
 a human `/decisions` workflow, and audited decision governance. The former
@@ -34,6 +34,10 @@ The experimental, provider-free Codex conversation POC currently supports:
 - Gateway-mediated room access; the independent worker has no direct room
   database access.
 - Provider-free component suites and synthetic composed checks.
+- Native Linux worker tests on AMD64/ARM64 with Rust 1.85.0/1.93.1 and both
+  package-policy captures using the pinned Rust 1.93.1 builder. The
+  [approved worker acceptance record](https://github.com/thoughtkhoral/thought-khoral-codex-agent/blob/main/.ai/specs/how/linux-worker-acceptance.md)
+  retains exact source, lock, proof and artifact evidence.
 
 Codex acceptance remains open for:
 
@@ -41,8 +45,8 @@ Codex acceptance remains open for:
 - A separately authorized live multi-human check covering an intervening room
   fact, worker restart and continuation, and a fresh session with the authorized
   room baseline.
-- Live settings, denied-model, and context-telemetry checks, plus Linux x86_64
-  native tool-policy and Rust 1.85 portability evidence.
+- Live settings, denied-model and context-telemetry checks, plus rendered-browser
+  verification of the full opt-in room stack.
 
 The published conversation v1.0.0 artifact is unchanged; the additive v1.1
 defaults candidate remains unreleased. These are experimental POC capabilities,
