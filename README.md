@@ -11,7 +11,7 @@ not here.
 
 ## Current project status
 
-The [organization profile](profile/README.md#current-state-status-reviewed-2026-11-19)
+The [organization profile](profile/README.md#current-state-status-reviewed-2026-11-20)
 summarizes the implemented MVP, verified native Codex worker, remaining Task 9
 room-stack/browser/live checks and the next verification milestone. Detailed
 scope and evidence remain in the project home's

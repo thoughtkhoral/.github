@@ -17,21 +17,24 @@ see the [cross-project Codex status guide](https://github.com/thoughtkhoral/thou
 the [compatibility matrix](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/compatibility-matrix.md),
 and [capability roadmap](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/roadmap.md).
 
-## Current state (status reviewed 2026-11-19)
+<a id="current-state-status-reviewed-2026-11-19"></a>
+
+## Current state (status reviewed 2026-11-20)
 
 The governed-room MVP and experimental Codex integration are implemented and
 published on their repositories' `main` branches. Native worker verification is
 complete for the tested revisions; full Codex room-stack and live-provider
-acceptance remain open.
+acceptance remain open. Published v1.1 and verified local released consumers/
+profile are distinguished from canonical runtimes in the [workspace guide](https://github.com/thoughtkhoral/thought-khoral/blob/main/docs/workspace-status.md).
 
 | Area | Verified or implemented | Remaining boundary |
 | --- | --- | --- |
 | Governed-room MVP | Authenticated rooms, ordered events, mention-aware delivery, human `/decisions` and audited deletion. The default deterministic-stack smoke passed at its recorded source inputs. | Local development evidence; no production acceptance. |
 | Codex conversation POC | Explicit human targeting, authorized room-wide history, shared continue/fresh-session controls, model/effort settings and context status. Component and composed synthetic checks passed. | Full opt-in room-stack, rendered-browser/Keycloak and live-provider verification remain open. |
 | Native Codex worker | Linux AMD64/ARM64 tests passed on Rust 1.85.0 and 1.93.1: 46 tests per cell. Both package-policy captures passed using the pinned Rust 1.93.1 builder. | Worker/package evidence does not establish live account access or full room-stack acceptance. |
-| Contracts | Conversation v1.0.0 is published and unchanged; additive v1.1 defaults source is on `main`. | The v1.1 artifact is unreleased; source publication is not a contract release. |
+| Contracts | Conversation v1.0.0 is unchanged; v1.1.0 is published at verified source `f1c8621`, with freshly verified downloads. | Released broker/UI consumption and profile preparation are verified on local branches; publication/integration and assembled-stack acceptance remain. |
 | Memory engine | Incubating room-scoped, in-memory ingestion/provenance proof with fixture extraction and an inactive draft adapter. | No active memory proposer, Codex memory integration, Cognee or durable storage. |
-| Specifications and docs | Specs and derived guides are synchronized. Published organization link checks cover the project home and all seven components. | Runtime, browser, provider and release acceptance are tracked separately. |
+| Specifications and docs | Current workspace specs distinguish published artifacts, canonical mains and local prepared branches; derived guides follow those sources. Published link checks cover all seven components. | This local refresh is not a claim of a new published CI run or runtime/browser/provider acceptance. |
 
 Recent evidence: the [latest verified worker run](https://github.com/thoughtkhoral/thought-khoral-codex-agent/actions/runs/44604155672)
 passed all four native compiler cells and both package/capture jobs. The
@@ -49,8 +52,8 @@ settings restoration, denied-model behavior, context telemetry and tool/egress
 isolation. See the [coordinated acceptance plan](https://github.com/thoughtkhoral/thought-khoral/blob/main/.ai/specs/how/codex-room-conversations-implementation-plan.md)
 for the exact criteria and evidence limits.
 
-Contract/image publication, release and production readiness remain separate
-gates. Open remote-agent admission is deferred. The former `Decision:` prefix
+Contract v1.1 publication is complete. Prepared source-branch integration,
+image publication and production readiness remain separate gates. Open remote-agent admission is deferred. The former `Decision:` prefix
 parser is retired; human actions retain authority over active decisions.
 
 ## Start with the MVP
